@@ -1,26 +1,12 @@
+apply plugin: 'base'
 apply plugin: 'java'
-// Java version selection
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-sourceSets {
-    main {
-        java {
-            srcDir 'src'
-        }
-    }
 
-    test {
-        java {
-            srcDir 'test'
-        }
-    }
-
-    dependencies {
-        //TestNG dependency
-        testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
-        //Selenium-Java dependency
-        compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
-
-
-    }
+repositories {
+    mavenCentral()
+}
+dependencies {
+    //TestNG dependency
+    compile group: 'org.testng', name: 'testng', version: '7.0.0'
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.0'
 }
