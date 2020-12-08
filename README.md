@@ -11,6 +11,7 @@ This solution solves the game on the chrome browser.
 Different Ways to Execute
 1. Can run the class "GameTest" as a TestNG class.
 2. Run the testng.xml by selecting the test kind as "Suite".
+3. Run the command "gradle clean test".
 
 Potential issues during execution: -
 1. Since the url is unsecured(http), TestNG blocks loading this url. Should that happen, set the 
